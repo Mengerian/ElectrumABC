@@ -1002,9 +1002,9 @@ class Fusion(threading.Thread, PrintError):
                 sum_in_str = format_satoshis(sum_in, num_zeros=2)
                 fee_str = str(total_fee)
                 feeloc = _('fee')
-                label = f"CashFusion {len(self.inputs)}⇢{len(self.outputs)}," \
+                label = f"CashFusion {len(self.inputs)} -> {len(self.outputs)}," \
                         f" {sum_in_str} {XEC.ticker} " \
-                        f"(−{fee_str} sats {feeloc})"
+                        f"(-{fee_str} sats {feeloc})"
                 wallets = set(self.source_wallet_info.keys())
                 wallets.add(self.target_wallet)
                 if len(wallets) > 1:
